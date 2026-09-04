@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Meta Information -->
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="A simple and professional To-Do List application built with HTML, CSS and JavaScript."
+    >
+
+    <meta
+        name="author"
+        content="Jannat"
+    >
+
+    <!-- Browser Theme Color -->
+    <meta
+        name="theme-color"
+        content="#4f46e5"
+    >
+
+    <!-- Page Title -->
+    <title>To-Do List | Jannat</title>
+
+    <!-- Favicon -->
+    <link
+        rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✓</text></svg>"
+    >
+
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+    <!-- ==============================
+         Header
+    =============================== -->
+    <header class="header">
+        <div class="container">
+
+            <div class="brand">
+                <a href="/" class="logo">
+                    <span class="logo-icon" aria-hidden="true">✓</span>
+                    <span class="logo-text">To-Do List</span>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- ==============================
+         Main Content
+    =============================== -->
+    <main class="main">
+
+        <div class="container">
+
+            <!-- Hero / Intro Section -->
+            <section class="intro" aria-labelledby="page-title">
+
+                <p class="intro-label">
+                    Stay Organized
+                </p>
+
+                <h1 id="page-title">
+                    My Tasks
+                </h1>
+
+                <p class="intro-text">
+                    Organize your day, manage your tasks,
+                    and get things done.
+                </p>
+
+            </section>
+
+
+            <!-- ==============================
+                 Todo Application
+            =============================== -->
+            <section
+                class="todo-app"
+                aria-label="To-Do List Application"
+            >
+
+                <!-- Task Input -->
+                <form
+                    class="task-form"
+                    id="task-form"
+                >
+
+                    <div class="input-wrapper">
+
+                        <label
+                            for="task-input"
+                            class="visually-hidden"
+                        >
+                            Enter a task
+                        </label>
+
+                        <input
+                            type="text"
+                            id="task-input"
+                            name="task"
+                            class="task-input"
+                            placeholder="What needs to be done?"
+                            autocomplete="off"
+                            maxlength="100"
+                            required
+                        >
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="add-task-btn"
+                        id="add-task"
+                    >
+                        <span aria-hidden="true">+</span>
+                        <span>Add Task</span>
+                    </button>
+
+                </form>
+
+
+                <!-- ==============================
+                     Task Toolbar
+                =============================== -->
+                <div class="task-toolbar">
+
+                    <!-- Task Count -->
+                    <div class="task-summary">
+
+                        <span
+                            class="task-count"
+                            id="task-count"
+                        >
+                            0 tasks
+                        </span>
+
+                    </div>
+
+
+                    <!-- Filter Buttons -->
+                    <nav
+                        class="task-filters"
+                        aria-label="Task filters"
+                    >
+
+                        <button
+                            type="button"
+                            class="filter-btn active"
+                            data-filter="all"
+                            aria-pressed="true"
+                        >
+                            All
+                        </button>
+
+                        <button
+                            type="button"
+                            class="filter-btn"
+                            data-filter="pending"
+                            aria-pressed="false"
+                        >
+                            Pending
+                        </button>
+
+                        <button
+                            type="button"
+                            class="filter-btn"
+                            data-filter="completed"
+                            aria-pressed="false"
+                        >
+                            Completed
+                        </button>
+
+                    </nav>
+
+                </div>
+
+
+                <!-- ==============================
+                     Task List
+                =============================== -->
+                <div class="task-container">
+
+                    <ul
+                        class="task-list"
+                        id="task-list"
+                        aria-live="polite"
+                        aria-label="Task list"
+                    >
+                        <!-- JavaScript will add tasks here -->
+                    </ul>
+
+
+                    <!-- Empty State -->
+                    <div
+                        class="empty-state"
+                        id="empty-state"
+                    >
+
+                        <div
+                            class="empty-icon"
+                            aria-hidden="true"
+                        >
+                            ✓
+                        </div>
+
+                        <h2>
+                            No tasks yet
+                        </h2>
+
+                        <p>
+                            Add your first task and start
+                            getting things done.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==============================
+                     Clear Completed
+                =============================== -->
+                <div class="task-actions">
+
+                    <button
+                        type="button"
+                        class="clear-completed-btn"
+                        id="clear-completed"
+                    >
+                        Clear Completed
+                    </button>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- ==============================
+         Footer
+    =============================== -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <p>
+                © 2026 Jannat. Built with
+                <span aria-label="love">♥</span>
+                using HTML, CSS & JavaScript.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script
+        src="script.js"
+        defer
+    ></script>
+
+</body>
+
+</html>
