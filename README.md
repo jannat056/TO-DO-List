@@ -6,7 +6,7 @@ This project was created to practice core frontend web development concepts, inc
 
 ## 🚀 Live Demo
 
-🔗 **Live Demo:** [Add your GitHub Pages link here]
+🔗 **Live Demo:** https://jannat056.github.io/TO-DO-List/
 
 ## 📌 Features
 
